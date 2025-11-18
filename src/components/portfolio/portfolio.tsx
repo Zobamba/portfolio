@@ -14,7 +14,13 @@ const Portfolio = () => {
       <div>
         <ul>
           {[
-             {
+            {
+              title: 'Onassify',
+              description:
+                'Your next-generation Point of Sale and Inventory Management app that simplifies business, boosts productivity, and drives results.',
+              video: '/onassify.mov',
+            },
+            {
               title: 'Learn Axis',
               description:
                 'A simple yet powerful Learning Management System designed to help you grow and excel effortlessly!',
@@ -55,24 +61,34 @@ const Portfolio = () => {
               className="flex flex-col sm:flex-row items-center justify-between mb-12 sm:mb-24"
             >
               <div className="w-full sm:w-2/3 mb-4 sm:mb-0">
-                <Image
-                  width={600}
-                  height={600}
-                  alt={project.title}
-                  src={project.image}
-                  className=""
-                />
+                {project.video ? (
+                  <video width={600} height={600} controls muted playsInline className="">
+                    <source src={project.video} type="video/quicktime" />
+                    <source src={project.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : project.image ? (
+                  <Image
+                    width={600}
+                    height={600}
+                    alt={project.title}
+                    src={project.image}
+                    className=""
+                  />
+                ) : null}
               </div>
               <div className="w-full sm:w-1/3 sm:pl-8">
                 <h1 className="text-2xl sm:text-4xl font-bold mb-2">{project.title}</h1>
                 <p className="text-base sm:text-lg mb-4 text-gray-500">{project.description}</p>
-                <Link
-                  className="bg-[#00FFD0] p-3 rounded hover:opacity-65 cursor-pointer"
-                  href={project.link}
-                  target="blank"
-                >
-                  View Application
-                </Link>
+                {project.link && (
+                  <Link
+                    className="bg-[#00FFD0] p-3 rounded hover:opacity-65 cursor-pointer"
+                    href={project.link}
+                    target="blank"
+                  >
+                    View Application
+                  </Link>
+                )}
               </div>
             </li>
           ))}

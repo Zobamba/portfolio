@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <div className="flex flex-col items-center justify-center px-8 lg:px-28">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-        {`I'm`} Onah Bernard Chizoba, a Full-Stack JavaScript Developer.
+        {`I'm`} Onah Bernard Chizoba, a Software Engineer.
       </h1>
       <p className="text-base sm:text-lg mb-4 text-gray-500 text-center">
         I specialize in building scalable applications with efficient back-end architecture and

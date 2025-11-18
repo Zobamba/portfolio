@@ -35,7 +35,7 @@ const About = () => {
           </div>
 
           <div className="relative w-full md:w-[50%] h-[300px] md:h-[500px] mt-8 md:mt-0">
-            <Image alt="my-image" src="/my-image.jpg" layout="fill" className="object-contain" />
+            <Image alt="my-image" src="/my-image.jpeg" layout="fill" className="object-contain" />
           </div>
         </div>
         <div className="flex flex-col items-center justify-between py-12 sm:py-16 px-8 sm:px-28 mb-8">
@@ -53,6 +53,7 @@ const About = () => {
             <Skills image="/react.svg" name="REACT.JS" />
             <Skills image="/nxt.png" name="NEXT.JS" />
             <Skills image="/nodejs.png" name="NODE.JS" />
+            <Skills image="/rails.png" name="RAILS" />
             <Skills image="/pg.png" name="POSTGRESQL" />
             <Skills image="/mysql.png" name="MYSQL" />
             <Skills image="/mon.png" name="MONGODB" />
