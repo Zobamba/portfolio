@@ -18,7 +18,7 @@ const Portfolio = () => {
               title: 'Onassify',
               description:
                 'Your next-generation Point of Sale and Inventory Management app that simplifies business, boosts productivity, and drives results.',
-              video: '/onassify.mov',
+              video: 'https://res.cloudinary.com/ddt4oo78m/video/upload/v1763467542/Onassify.mov',
             },
             {
               title: 'Learn Axis',
