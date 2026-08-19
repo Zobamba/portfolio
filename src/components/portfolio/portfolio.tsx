@@ -73,7 +73,7 @@ const Portfolio = () => {
                     height={600}
                     alt={project.title}
                     src={project.image}
-                    className=""
+                    className="h-auto w-full"
                   />
                 ) : null}
               </div>
