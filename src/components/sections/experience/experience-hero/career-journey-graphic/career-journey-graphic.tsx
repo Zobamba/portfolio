@@ -135,6 +135,7 @@ const CareerJourneyGraphic = () => {
 
   useEffect(() => {
     if (!inView) return
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-shot staged-animation trigger, not external-state sync
     setStage(1)
     const t2 = setTimeout(() => setStage(2), DRAW_MS * (1 / 3))
     const t3 = setTimeout(() => setStage(3), DRAW_MS * (2 / 3))
