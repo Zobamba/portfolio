@@ -1,6 +1,6 @@
 export const about = {
   name: 'Onah Bernard Chizoba',
-  image: '/profile-pic.png',
+  image: '/profile-portrait.png',
   bio: "I'm a Full Stack Developer with 5+ years of experience building applications that solve real-world problems, I enjoy turning ideas into scalable products and writing clean, efficient code.",
   location: 'Lagos, Nigeria',
   email: 'onahbernardchizoba@gmail.com',

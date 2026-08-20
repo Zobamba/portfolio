@@ -19,15 +19,7 @@ const ProfilePortrait = () => {
               'radial-gradient(ellipse 100% 100% at 100% 100%, black 40%, transparent 90%)',
           }}
         />
-        <div
-          className="absolute -inset-1 animate-breathe rounded-full opacity-10 blur-md"
-          style={{ backgroundImage: ringGradient }}
-          aria-hidden="true"
-        />
-        <div
-          className="relative animate-breathe rounded-full p-[1px]"
-          style={{ backgroundImage: ringGradient }}
-        >
+        <div className="relative rounded-full p-[1px]" style={{ backgroundImage: ringGradient }}>
           <div className="rounded-full bg-background p-1">
             <Avatar src={about.image} alt={about.name} size={185} />
           </div>
