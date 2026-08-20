@@ -3,19 +3,152 @@
 @tailwind utilities;
 
 :root {
-  --font-geist-sans: "Arial, sans-serif";
-  --font-geist-mono: "Courier New, monospace";
+  --font-geist-sans: 'Arial, sans-serif';
+  --font-geist-mono: 'Courier New, monospace';
+
+  --background: 212 90% 4%;
+  --background-deepest: 222 87% 3%;
+  --background-surface: 213 85% 5%;
+  --foreground: 210 40% 98%;
+
+  --card: 220 56% 6%;
+  --card-foreground: 210 40% 98%;
+  --card-elevated: 219 52% 6%;
+  --panel: 219 63% 5%;
+  --editor-bg: 225 15% 7%;
+  --pill-bg: 222 16% 9%;
+  --pill-bg-hover: 222 16% 12%;
+
+  --popover: 220 56% 6%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 210 40% 98%;
+  --primary-hover: 221 83% 53%;
+  --primary-to: 239 84% 67%;
+
+  --cta-to: 243 75% 59%;
+  --cta-to-hover: 245 58% 51%;
+  --primary-active: 224 76% 48%;
+  --cta-to-active: 244 55% 41%;
+
+  --secondary: 188 86% 53%;
+  --secondary-foreground: 222 87% 3%;
+
+  --link: 198 93% 60%;
+  --purple: 258 90% 66%;
+  --accent-light: 213 94% 68%;
+  --soft: 172 66% 50%;
+  --ware: 187 92% 69%;
+  --name-end: 228 68% 34%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --subtle: 213 27% 84%;
+  --faint: 215 16% 47%;
+
+  --accent: 222 47% 11%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 215 36% 14%;
+  --outline-border: 215 25% 27%;
+  --input: 215 36% 14%;
+  --ring: 217 91% 60%;
+
+  --chart-1: 217 91% 60%;
+  --chart-2: 239 84% 67%;
+  --chart-3: 188 86% 53%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 340 75% 55%;
+
+  --radius: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: 240 20% 99%;
+  --background-deepest: 240 20% 99%;
+  --background-surface: 240 10% 97%;
+  --foreground: 240 10% 4%;
+
+  --card: 240 10% 95%;
+  --card-foreground: 240 10% 4%;
+  --card-elevated: 240 10% 94%;
+  --panel: 240 10% 95%;
+  --editor-bg: 220 8% 94%;
+  --pill-bg: 220 10% 94%;
+  --pill-bg-hover: 220 10% 91%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 4%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 221 83% 53%;
+  --primary-to: 239 84% 67%;
+
+  --cta-to: 243 75% 59%;
+  --cta-to-hover: 245 58% 51%;
+  --primary-active: 224 76% 48%;
+  --cta-to-active: 244 55% 41%;
+
+  --secondary: 190 80% 38%;
+  --secondary-foreground: 0 0% 100%;
+
+  --link: 199 89% 48%;
+  --purple: 258 90% 60%;
+  --accent-light: 213 80% 55%;
+  --soft: 172 66% 40%;
+  --ware: 187 80% 45%;
+  --name-end: 228 68% 34%;
+
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 40%;
+  --subtle: 217 19% 27%;
+  --faint: 215 14% 55%;
+
+  --accent: 240 5% 94%;
+  --accent-foreground: 240 10% 4%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 6% 88%;
+  --outline-border: 240 6% 80%;
+  --input: 240 6% 88%;
+  --ring: 217 91% 60%;
+
+  --chart-1: 217 91% 60%;
+  --chart-2: 239 84% 67%;
+  --chart-3: 190 80% 38%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 340 75% 55%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-geist-sans);
-  color: var(--foreground);
-  background: var(--background);
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
