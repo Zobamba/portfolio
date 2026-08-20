@@ -4,14 +4,14 @@ import ContactHeroGraphic from '@/src/components/sections/contact/contact-hero/c
 
 const ContactHero = () => {
   return (
-    <Container className="grid items-start gap-12 pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
+    <Container className="grid items-start gap-12 md:pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
       <div>
         <div className="flex animate-reveal items-center gap-2 text-sm font-medium text-[#22C55E]">
           <span className="h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
           {contactPage.eyebrow}
         </div>
 
-        <h1 className="mt-3 animate-reveal text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-5xl">
+        <h1 className="mt-3 animate-reveal text-center text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-left sm:text-5xl">
           {contactPage.headingLine1}
           <br />
           {contactPage.headingWhite}{' '}
@@ -20,7 +20,7 @@ const ContactHero = () => {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-lg animate-reveal text-base text-muted-foreground [animation-delay:200ms] sm:text-lg">
+        <p className="mt-6 max-w-lg animate-reveal text-center text-base text-muted-foreground [animation-delay:200ms] sm:text-left sm:text-lg">
           {contactPage.paragraph}
         </p>
 
@@ -30,7 +30,7 @@ const ContactHero = () => {
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border text-primary">
                 <meta.icon size={20} />
               </span>
-              <p className="max-w-[180px] text-sm text-muted-foreground">{meta.text}</p>
+              <p className="md:max-w-[180px] text-sm text-muted-foreground">{meta.text}</p>
             </div>
           ))}
         </div>

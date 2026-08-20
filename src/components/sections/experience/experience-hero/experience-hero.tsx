@@ -5,14 +5,14 @@ import CareerJourneyGraphic from '@/src/components/sections/experience/experienc
 
 const ExperienceHero = () => {
   return (
-    <Container className="grid items-start gap-12 pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
+    <Container className="grid items-start gap-12 md:pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
       <div>
         <div className="flex items-center gap-2 text-sm font-medium text-primary">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
           {experiencePage.eyebrow}
         </div>
 
-        <h1 className="mt-3 text-4xl font-bold leading-tight text-foreground sm:text-5xl">
+        <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-foreground sm:text-left sm:text-5xl">
           {experiencePage.headingLine1}
           <br />
           <span className="bg-name-gradient bg-clip-text text-transparent">
@@ -20,11 +20,11 @@ const ExperienceHero = () => {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-lg text-base text-muted-foreground sm:text-lg">
+        <p className="mt-6 max-w-lg text-center text-base text-muted-foreground sm:text-left sm:text-lg">
           {experiencePage.paragraph}
         </p>
 
-        <div className="mt-8 grid grid-cols-3 gap-6">
+        <div className="mt-4 flex flex-wrap justify-center gap-4 animate-reveal [animation-delay:300ms] sm:justify-start sm:gap-6">
           {experienceHeroStats.map((stat) => (
             <HeroStatItem key={stat.label} stat={stat} />
           ))}

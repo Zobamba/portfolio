@@ -91,15 +91,17 @@ const MilestoneNode = ({
   breathing: boolean
 }) => (
   <>
-    <circle
-      cx={x}
-      cy={y}
-      r={34}
-      fill={color}
-      opacity={breathing ? undefined : lit ? 0.32 : 0}
-      className={breathing ? 'animate-breathe' : undefined}
-      style={{ filter: 'blur(10px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
-    />
+    <g opacity={0.55}>
+      <circle
+        cx={x}
+        cy={y}
+        r={34}
+        fill={color}
+        opacity={breathing ? undefined : lit ? 0.32 : 0}
+        className={breathing ? 'animate-breathe' : undefined}
+        style={{ filter: 'blur(10px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
+      />
+    </g>
     <circle
       cx={x}
       cy={y}
@@ -115,7 +117,7 @@ const MilestoneNode = ({
       cy={y}
       r={8}
       fill={color}
-      opacity={lit ? 0.6 : 0}
+      opacity={lit ? 0.35 : 0}
       style={{ filter: 'blur(3px)', transition: `opacity ${FADE_MS}ms ease-out` }}
     />
     <circle cx={x} cy={y} r={8} fill={color} opacity={lit ? 1 : 0} style={{ transition: `opacity ${FADE_MS}ms ease-out` }} />
@@ -207,15 +209,17 @@ const CareerJourneyGraphic = () => {
         <MilestoneNode x={220} y={190} color="#4A7FF5" lit={stage >= 2} breathing={breathing} />
         <MilestoneNode x={150} y={120} color="#5570F4" lit={stage >= 3} breathing={breathing} />
 
-        <circle
-          cx={230}
-          cy={50}
-          r={54}
-          fill="#6366F1"
-          opacity={breathing ? undefined : stage >= 4 ? 0.3 : 0}
-          className={breathing ? 'animate-breathe' : undefined}
-          style={{ filter: 'blur(14px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
-        />
+        <g opacity={0.55}>
+          <circle
+            cx={230}
+            cy={50}
+            r={54}
+            fill="#6366F1"
+            opacity={breathing ? undefined : stage >= 4 ? 0.3 : 0}
+            className={breathing ? 'animate-breathe' : undefined}
+            style={{ filter: 'blur(14px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
+          />
+        </g>
         <circle
           cx={230}
           cy={50}

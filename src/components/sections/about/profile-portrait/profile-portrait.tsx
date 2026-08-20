@@ -6,7 +6,7 @@ const ringGradient =
 
 const ProfilePortrait = () => {
   return (
-    <div className="flex flex-col items-end justify-center">
+    <div className="flex flex-col items-center justify-center lg:items-end">
       <div className="relative w-fit">
         <div
           className="absolute -left-28 -top-16 h-56 w-32 opacity-40"

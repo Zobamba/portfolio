@@ -14,14 +14,14 @@ const OnassifyHero = () => {
           {hero.badgeLabel}
         </div>
 
-        <h1 className="mt-3 animate-reveal text-4xl font-bold text-foreground [animation-delay:100ms] sm:text-5xl">
+        <h1 className="mt-3 animate-reveal text-center text-4xl font-bold text-foreground [animation-delay:100ms] sm:text-left sm:text-5xl">
           {hero.title}
         </h1>
-        <p className="mt-1 animate-reveal text-lg text-muted-foreground [animation-delay:100ms]">
+        <p className="mt-1 animate-reveal text-center text-lg text-muted-foreground [animation-delay:100ms] sm:text-left">
           {hero.subtitle}
         </p>
 
-        <p className="mt-4 max-w-lg animate-reveal text-muted-foreground [animation-delay:200ms]">
+        <p className="mt-4 max-w-lg animate-reveal text-center text-muted-foreground [animation-delay:200ms] sm:text-left">
           {hero.description}
         </p>
 

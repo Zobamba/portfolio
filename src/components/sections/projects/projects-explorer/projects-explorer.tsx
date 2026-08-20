@@ -36,14 +36,14 @@ const ProjectsExplorer = () => {
   return (
     <div>
       <div className="flex animate-reveal flex-col gap-4 [animation-delay:300ms] sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap gap-2">
+        <div className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 sm:mx-0 sm:flex-wrap sm:px-0">
           {projectCategoryFilters.map((filter) => (
             <button
               key={filter.value}
               type="button"
               onClick={() => handleCategoryChange(filter.value)}
               className={cn(
-                'rounded border px-4 py-1 text-sm font-medium transition-all duration-200',
+                'shrink-0 rounded border px-4 py-2 text-sm font-medium transition-all duration-200 sm:py-1',
                 category === filter.value
                   ? 'border-transparent bg-cta-gradient text-primary-foreground hover:bg-cta-gradient-hover'
                   : 'border-border bg-card text-muted-foreground hover:text-foreground',

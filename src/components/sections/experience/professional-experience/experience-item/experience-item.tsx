@@ -97,7 +97,9 @@ const ExperienceItem = ({ item, isLast }: ExperienceItemProps) => {
                 <p className="mt-0.5 text-sm text-muted-foreground">
                   <span style={{ color: item.accentColor }}>{item.company}</span> • {item.location}
                 </p>
-                <p className="mt-4 text-sm italic text-muted-foreground">{item.description}</p>
+                <p className="mt-4 text-center text-sm italic text-muted-foreground sm:text-left">
+                  {item.description}
+                </p>
               </div>
             </div>
 

@@ -10,7 +10,7 @@ const AboutIntro = () => {
         {aboutPage.eyebrow}
       </div>
 
-      <h1 className="mt-3 animate-reveal text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-3xl">
+      <h1 className="mt-3 animate-reveal text-center text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-left sm:text-3xl">
         {aboutPage.headingLine1}
         <br />
         <span className="bg-engineer-gradient bg-clip-text text-transparent">
@@ -18,7 +18,7 @@ const AboutIntro = () => {
         </span>
       </h1>
 
-      <p className="mt-4 max-w-xl animate-reveal pr-12 text-muted-foreground [animation-delay:200ms]">
+      <p className="mt-4 max-w-xl animate-reveal text-center text-muted-foreground [animation-delay:200ms] sm:pr-12 sm:text-left">
         {aboutPage.paragraph}
       </p>
 
