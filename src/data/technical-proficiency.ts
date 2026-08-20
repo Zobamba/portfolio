@@ -28,7 +28,7 @@ export const technicalProficiency: TechnicalProficiencyItem[] = [
     icon: SiTypescript,
     colorClass: 'text-[#3178C6]',
     iconBgColor: '#FFFFFF',
-    percentage: 95,
+    percentage: 90,
     level: 'Expert',
   },
   {
@@ -63,14 +63,14 @@ export const technicalProficiency: TechnicalProficiencyItem[] = [
     name: 'HTML5 & CSS3',
     icon: SiHtml5,
     colorClass: 'text-[#E34F26]',
-    percentage: 95,
+    percentage: 85,
     level: 'Expert',
   },
   {
     name: 'Tailwind CSS',
     icon: SiTailwindcss,
     colorClass: 'text-[#06B6D4]',
-    percentage: 90,
+    percentage: 85,
     level: 'Advanced',
   },
   {
@@ -78,7 +78,7 @@ export const technicalProficiency: TechnicalProficiencyItem[] = [
     icon: SiPostgresql,
     colorClass: 'text-white',
     iconBgColor: '#4169E1',
-    percentage: 85,
+    percentage: 80,
     level: 'Advanced',
   },
   {
@@ -92,7 +92,7 @@ export const technicalProficiency: TechnicalProficiencyItem[] = [
     name: 'Git & GitHub',
     icon: SiGit,
     colorClass: 'text-[#F05032]',
-    percentage: 90,
-    level: 'Expert',
+    percentage: 85,
+    level: 'Advanced',
   },
 ]
