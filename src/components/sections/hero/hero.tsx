@@ -13,8 +13,14 @@ const Hero = () => {
         </span>
 
         <h1 className="mt-6 animate-reveal text-center text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-left sm:text-5xl">
-          Onah Bernard{' '}
-          <span className="bg-name-gradient bg-clip-text text-transparent">Chizoba</span>
+          Onah{' '}
+          <span className="bg-name-gradient bg-clip-text text-transparent sm:bg-none sm:text-foreground">
+            Bernard
+          </span>
+          <span className="hidden sm:inline">
+            {' '}
+            <span className="bg-name-gradient bg-clip-text text-transparent">Chizoba</span>
+          </span>
         </h1>
         <h2 className="mt-1 flex animate-reveal items-center justify-center text-3xl [animation-delay:100ms] sm:justify-start sm:text-4xl">
           <span className="bg-software-gradient bg-clip-text text-transparent">Software</span>

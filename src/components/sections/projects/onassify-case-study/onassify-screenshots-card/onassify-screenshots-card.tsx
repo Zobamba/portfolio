@@ -76,7 +76,7 @@ const OnassifyScreenshotsCard = () => {
             type="button"
             aria-label="Close preview"
             onClick={() => setActiveIndex(null)}
-            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition-colors hover:bg-black/60"
           >
             <FiX size={18} />
           </button>
@@ -88,7 +88,7 @@ const OnassifyScreenshotsCard = () => {
               e.stopPropagation()
               setActiveIndex((i) => (i === null ? i : (i - 1 + productScreenshots.length) % productScreenshots.length))
             }}
-            className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-4"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition-colors hover:bg-black/60 sm:left-4"
           >
             <FiChevronLeft size={20} />
           </button>
@@ -100,7 +100,7 @@ const OnassifyScreenshotsCard = () => {
               e.stopPropagation()
               setActiveIndex((i) => (i === null ? i : (i + 1) % productScreenshots.length))
             }}
-            className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-4"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition-colors hover:bg-black/60 sm:right-4"
           >
             <FiChevronRight size={20} />
           </button>
