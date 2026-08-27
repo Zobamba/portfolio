@@ -2,16 +2,13 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { FiDownload, FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 import { HiOutlineCodeBracket } from 'react-icons/hi2'
 import { navLinks } from '@/src/data/nav-links'
 import NavLinkItem from '@/src/components/layout/navbar/nav-link-item'
 import ThemeToggle from '@/src/components/theme/theme-toggle/theme-toggle'
-import Button from '@/src/components/ui/button/button'
+import BookACallButton from '@/src/components/ui/book-a-call-button/book-a-call-button'
 import Container from '@/src/components/ui/container/container'
-
-const resumeUrl =
-  'https://drive.google.com/file/d/1JTIRmWQ3Q8OjY1rPzmiwJJjTEMSeqkTP/view?usp=sharing'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -32,10 +29,7 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
-          <Button href={resumeUrl} size="sm" className="inline-flex items-center gap-2">
-            <FiDownload size={14} />
-            Download CV
-          </Button>
+          <BookACallButton size="sm" />
         </div>
 
         <button
@@ -55,10 +49,7 @@ const Navbar = () => {
           ))}
           <div className="flex items-center gap-3 pt-2">
             <ThemeToggle />
-            <Button href={resumeUrl} size="sm" className="inline-flex items-center gap-2">
-              <FiDownload size={14} />
-              Download CV
-            </Button>
+            <BookACallButton size="sm" />
           </div>
         </nav>
       )}

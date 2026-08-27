@@ -19,10 +19,14 @@ const subjectOptions = [
 const fieldClass =
   'w-full rounded-lg border border-border bg-background/60 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground transition-all duration-200 focus:border-primary focus:outline-none focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.12)]'
 
-const SendMessageForm = () => {
+interface SendMessageFormProps {
+  subject: string
+  onSubjectChange: (subject: string) => void
+}
+
+const SendMessageForm = ({ subject, onSubjectChange }: SendMessageFormProps) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -31,7 +35,7 @@ const SendMessageForm = () => {
   const resetForm = () => {
     setName('')
     setEmail('')
-    setSubject('')
+    onSubjectChange('')
     setMessage('')
     setSubmitted(false)
   }
@@ -123,7 +127,7 @@ const SendMessageForm = () => {
               id="subject"
               required
               value={subject}
-              onChange={(event) => setSubject(event.target.value)}
+              onChange={(event) => onSubjectChange(event.target.value)}
               className={`peer appearance-none pr-9 ${fieldClass} ${subject ? 'text-foreground' : 'text-muted-foreground'}`}
             >
               <option value="" disabled>

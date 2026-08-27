@@ -1,8 +1,7 @@
 import Container from '@/src/components/ui/container/container'
 import ContactHero from '@/src/components/sections/contact/contact-hero/contact-hero'
-import GetInTouch from '@/src/components/sections/contact/get-in-touch/get-in-touch'
-import SendMessageForm from '@/src/components/sections/contact/send-message-form/send-message-form'
-import HelpOptions from '@/src/components/sections/contact/help-options/help-options'
+import PreferToTalk from '@/src/components/sections/contact/prefer-to-talk/prefer-to-talk'
+import ContactFormSection from '@/src/components/sections/contact/contact-form-section/contact-form-section'
 import WhyWorkWithMe from '@/src/components/sections/contact/why-work-with-me/why-work-with-me'
 import ContactCta from '@/src/components/sections/contact/contact-cta/contact-cta'
 
@@ -11,16 +10,11 @@ export default function ContactPage() {
     <main className="mt-12">
       <ContactHero />
 
-      <Container className="grid gap-4 pb-4 lg:grid-cols-2">
-        <GetInTouch />
-        <div id="send-message">
-          <SendMessageForm />
-        </div>
+      <Container className="pb-4">
+        <PreferToTalk />
       </Container>
 
-      <Container className="pb-4">
-        <HelpOptions />
-      </Container>
+      <ContactFormSection />
 
       <Container className="pb-4">
         <WhyWorkWithMe />

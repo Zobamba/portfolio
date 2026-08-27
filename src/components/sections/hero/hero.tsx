@@ -1,8 +1,11 @@
-import { FiArrowRight, FiMail } from 'react-icons/fi'
+import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import Button from '@/src/components/ui/button/button'
 import SocialLinks from '@/src/components/ui/social-links/social-links'
 import HeroGraphic from '@/src/components/sections/hero/hero-graphic/hero-graphic'
 import Container from '@/src/components/ui/container/container'
+
+const resumeUrl =
+  'https://drive.google.com/file/d/1JTIRmWQ3Q8OjY1rPzmiwJJjTEMSeqkTP/view?usp=sharing'
 
 const Hero = () => {
   return (
@@ -33,9 +36,9 @@ const Hero = () => {
             View My Work
             <FiArrowRight size={16} />
           </Button>
-          <Button href="/contact" variant="outline" className="inline-flex items-center gap-2">
-            Contact Me
-            <FiMail size={16} />
+          <Button href={resumeUrl} variant="outline" className="inline-flex items-center gap-2">
+            Download CV
+            <FiDownload size={16} />
           </Button>
         </div>
 

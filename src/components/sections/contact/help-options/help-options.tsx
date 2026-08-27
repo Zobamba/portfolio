@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { HiOutlineBriefcase } from 'react-icons/hi2'
 import { FiCheck } from 'react-icons/fi'
 import { helpOptions } from '@/src/data/help-options'
@@ -8,15 +7,18 @@ import { hexToRgba, cn } from '@/src/lib/utils'
 import Card from '@/src/components/ui/card/card'
 import CardHeader from '@/src/components/ui/card/card-header'
 
-const HelpOptions = () => {
-  const [selected, setSelected] = useState<string | null>(null)
+interface HelpOptionsProps {
+  selected: string | null
+  onSelect: (label: string) => void
+}
 
+const HelpOptions = ({ selected, onSelect }: HelpOptionsProps) => {
   return (
     <Card className="p-5">
       <CardHeader
         icon={HiOutlineBriefcase}
         title="What can I help you with?"
-        subtitle="Select the option that best describes what you need."
+        subtitle="Select the option that best describes what you need — it'll pre-fill the subject below."
       />
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
@@ -26,7 +28,7 @@ const HelpOptions = () => {
             <button
               key={option.label}
               type="button"
-              onClick={() => setSelected(isSelected ? null : option.label)}
+              onClick={() => onSelect(option.label)}
               className={cn(
                 'relative flex flex-col items-center gap-2 rounded-lg border p-3 text-center text-xs font-medium transition-all duration-200',
                 isSelected ? 'text-foreground' : 'border-border text-muted-foreground hover:border-primary/40',

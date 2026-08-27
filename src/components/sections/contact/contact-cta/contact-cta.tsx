@@ -1,3 +1,5 @@
+'use client'
+
 import { HiOutlinePaperAirplane } from 'react-icons/hi2'
 import { FiArrowRight } from 'react-icons/fi'
 import Card from '@/src/components/ui/card/card'
@@ -5,6 +7,12 @@ import Button from '@/src/components/ui/button/button'
 import GlowDotGrid from '@/src/components/ui/glow-dot-grid/glow-dot-grid'
 
 const ContactCta = () => {
+  // A plain href="#send-message" only scrolls when the URL hash actually
+  // changes, so repeat clicks after the first do nothing — scroll explicitly.
+  const handleClick = () => {
+    document.getElementById('send-message')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <Card className="relative flex flex-col items-center gap-4 overflow-hidden p-6 text-center sm:flex-row sm:justify-between sm:text-left">
       <GlowDotGrid className="inset-0" />
@@ -24,7 +32,7 @@ const ContactCta = () => {
         </div>
       </div>
 
-      <Button href="#send-message" className="group relative z-10 inline-flex shrink-0 items-center gap-2">
+      <Button onClick={handleClick} className="group relative z-10 inline-flex shrink-0 items-center gap-2">
         Start a Conversation
         <FiArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
       </Button>
