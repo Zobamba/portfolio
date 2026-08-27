@@ -15,7 +15,7 @@ const ExperienceHero = () => {
         <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-foreground sm:text-left sm:text-5xl">
           {experiencePage.headingLine1}
           <br />
-          <span className="bg-name-gradient bg-clip-text text-transparent">
+          <span className="text-primary">
             {experiencePage.headingHighlight}
           </span>
         </h1>

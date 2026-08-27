@@ -15,20 +15,20 @@ export const whyWorkWithMe: WhyWorkWithMeItem[] = [
     title: 'Clear Communication',
     description:
       'I believe good software starts with understanding the problem clearly. I keep communication open and transparent at every step.',
-    accentColor: '#3B82F6',
+    accentColor: '#0F766E',
   },
   {
     icon: HiOutlineShieldCheck,
     title: 'Reliable Delivery',
     description:
       'I focus on building maintainable solutions that work beyond the initial release. Quality, testing and documentation matter.',
-    accentColor: '#8B5CF6',
+    accentColor: '#52525B',
   },
   {
     icon: FiTarget,
     title: 'Product Mindset',
     description:
       'I think about the user and business outcome, not just the code. I build solutions that create real impact and value.',
-    accentColor: '#22D3EE',
+    accentColor: '#C2410C',
   },
 ]

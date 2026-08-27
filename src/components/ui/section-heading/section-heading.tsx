@@ -14,7 +14,7 @@ const SectionHeading = ({ title, linkLabel, linkHref }: SectionHeadingProps) => 
       {linkLabel && linkHref && (
         <Link
           href={linkHref}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-link hover:opacity-80"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:opacity-80"
         >
           {linkLabel}
           <FiArrowRight size={14} />

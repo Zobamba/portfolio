@@ -8,7 +8,9 @@ interface CardProps {
 
 const Card = ({ children, className }: CardProps) => {
   return (
-    <div className={cn('rounded-xl border border-border bg-card', className)}>{children}</div>
+    <div className={cn('rounded-xl border border-border bg-card shadow-card', className)}>
+      {children}
+    </div>
   )
 }
 

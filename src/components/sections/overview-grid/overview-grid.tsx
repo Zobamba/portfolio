@@ -17,7 +17,6 @@ const OverviewGrid = () => {
         </div>
         <div
           className={cn(
-            dividerBase,
             'before:hidden after:block sm:before:block sm:after:hidden lg:overflow-hidden lg:rounded-l-xl lg:border-l lg:border-y lg:border-border',
           )}
         >

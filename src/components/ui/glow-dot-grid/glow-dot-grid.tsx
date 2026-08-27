@@ -5,13 +5,11 @@ interface GlowDotGridProps {
 }
 
 /**
- * Radial glowing dot grid — decorative backdrop for hero-style graphics.
- * Dots are concentrated in two diagonal zones (middle-left toward top, middle-right toward
- * bottom) rather than a single centered radius, so the effect reads as directional, not a halo.
+ * Extremely subtle dot-grid texture — decorative backdrop for hero-style graphics.
+ * A fixed, muted neutral tone at very low opacity, fading out toward the edges so it
+ * reads as a faint technical/editorial texture rather than a glow or a pattern with a hard edge.
  */
-const dotMask =
-  'radial-gradient(ellipse 60% 50% at 15% 20%, black 0%, transparent 70%), ' +
-  'radial-gradient(ellipse 60% 50% at 85% 80%, black 0%, transparent 70%)'
+const fadeMask = 'radial-gradient(ellipse 75% 75% at center, black 0%, transparent 75%)'
 
 const GlowDotGrid = ({ className }: GlowDotGridProps) => {
   return (
@@ -19,10 +17,10 @@ const GlowDotGrid = ({ className }: GlowDotGridProps) => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'radial-gradient(hsl(var(--soft) / 0.55) 1px, transparent 1px)',
-          backgroundSize: '18px 18px',
-          maskImage: dotMask,
-          WebkitMaskImage: dotMask,
+          backgroundImage: 'radial-gradient(rgba(214, 211, 204, 0.6) 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+          maskImage: fadeMask,
+          WebkitMaskImage: fadeMask,
         }}
       />
       {/* soft vignette so dots fade out before reaching the outer edge, instead of cutting off abruptly */}

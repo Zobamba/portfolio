@@ -9,8 +9,8 @@ const OnassifyHero = () => {
   return (
     <Container className="grid items-start gap-12 pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
       <div>
-        <div className="flex animate-reveal items-center gap-2 text-sm font-medium text-[#22C55E]">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
+        <div className="flex animate-reveal items-center gap-2 text-sm font-medium text-primary">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
           {hero.badgeLabel}
         </div>
 

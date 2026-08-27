@@ -19,12 +19,12 @@ const seededRandom = (seed: number) => {
   return x - Math.floor(x)
 }
 
-// Keep the Skills page's own blue/cyan/purple/green palette (not the homepage's wider rainbow set).
+// Restrained tone pool: mostly graphite, with teal/amber accents appearing only occasionally.
 const segmentGradientPairs = [
-  ['rgba(59, 130, 246, 0.28)', 'rgba(99, 102, 241, 0.18)'],
-  ['rgba(34, 211, 238, 0.26)', 'rgba(56, 189, 248, 0.16)'],
-  ['rgba(139, 92, 246, 0.26)', 'rgba(236, 72, 153, 0.16)'],
-  ['rgba(74, 222, 128, 0.24)', 'rgba(45, 212, 191, 0.16)'],
+  ['hsl(var(--foreground) / 0.18)', 'hsl(var(--foreground) / 0.08)'],
+  ['hsl(var(--foreground) / 0.18)', 'hsl(var(--foreground) / 0.08)'],
+  ['hsl(var(--primary) / 0.4)', 'hsl(var(--primary) / 0.18)'],
+  ['hsl(var(--secondary) / 0.4)', 'hsl(var(--secondary) / 0.18)'],
 ]
 
 const wideWidths = ['w-16', 'w-20', 'w-24', 'w-28']
@@ -58,29 +58,12 @@ const codeLines: CodeLine[] = lineNumbers.map((number, rowIndex) => {
 // TypeScript, React, PostgreSQL sit to the left of the panel; Node.js and Tailwind sit to the right.
 const SkillsHeroGraphic = () => {
   return (
-    <div
-      className="relative mx-auto hidden md:block md:w-[420px] xl:w-[460px]"
-      style={{ perspective: '1400px' }}
-    >
+    <div className="relative mx-auto hidden md:block md:w-[420px] xl:w-[460px]">
       <GlowDotGrid className="-inset-10" />
 
       <div
-        className="pointer-events-none absolute right-0 top-1/2 h-44 w-32 -translate-y-1/2 translate-x-1/3 rounded-full blur-2xl"
-        style={{ background: 'radial-gradient(circle, rgba(37, 99, 235, 0.42), transparent 70%)' }}
-      />
-      <div
-        className="pointer-events-none absolute left-0 top-1/2 h-40 w-28 -translate-x-1/3 -translate-y-1/2 rounded-full blur-2xl"
-        style={{ background: 'radial-gradient(circle, rgba(37, 99, 235, 0.24), transparent 70%)' }}
-      />
-
-      <div
-        className="relative aspect-[16/11] rounded-2xl border"
-        style={{
-          transform: 'rotateY(-30deg) rotateX(2deg)',
-          borderColor: 'hsl(var(--primary) / 0.5)',
-          boxShadow: '0 0 24px 2px hsl(var(--primary) / 0.35), inset 0 0 30px hsl(var(--primary) / 0.08)',
-          background: 'linear-gradient(160deg, hsl(var(--card-elevated)) 0%, hsl(var(--background)) 100%)',
-        }}
+        className="relative aspect-[16/11] rounded-2xl border border-border bg-card shadow-elevated"
+        style={{ transform: 'rotateY(-4deg)' }}
       >
         <div className="flex h-full w-full overflow-hidden rounded-[15px]">
           <div className="flex w-9 shrink-0 flex-col items-center gap-4 border-r border-border/60 bg-background/60 py-3">
@@ -99,7 +82,7 @@ const SkillsHeroGraphic = () => {
               <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
             </div>
 
-            <div className="flex flex-1 flex-col justify-evenly py-2 blur-[0.5px]">
+            <div className="flex flex-1 flex-col justify-evenly py-2">
               {codeLines.map((line) => (
                 <div key={line.number} className="flex items-center gap-4">
                   <span className="w-5 shrink-0 text-right text-[8px] leading-none text-muted-foreground/50">

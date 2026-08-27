@@ -5,10 +5,10 @@ export interface SkillsBreakdownSegment {
 }
 
 export const skillsBreakdownSegments: SkillsBreakdownSegment[] = [
-  { label: 'Frontend', percentage: 40, color: '#3B82F6' },
-  { label: 'Backend', percentage: 30, color: '#A855F7' },
-  { label: 'Database', percentage: 20, color: '#22D3EE' },
-  { label: 'DevOps & Tools', percentage: 10, color: '#F59E0B' },
+  { label: 'Frontend', percentage: 40, color: '#0F766E' },
+  { label: 'Backend', percentage: 30, color: '#52525B' },
+  { label: 'Database', percentage: 20, color: '#0D9488' },
+  { label: 'DevOps & Tools', percentage: 10, color: '#C2410C' },
 ]
 
 export const totalTechnologies = '15+'

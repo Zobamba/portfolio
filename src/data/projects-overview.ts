@@ -5,8 +5,8 @@ export interface ProjectsOverviewSegment {
 }
 
 export const projectsOverviewSegments: ProjectsOverviewSegment[] = [
-  { label: 'Web Applications', percentage: 83, color: '#3B82F6' },
-  { label: 'APIs & Backend', percentage: 17, color: '#F59E0B' },
+  { label: 'Web Applications', percentage: 83, color: '#0F766E' },
+  { label: 'APIs & Backend', percentage: 17, color: '#C2410C' },
 ]
 
 export const totalProjects = '20+'

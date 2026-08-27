@@ -17,7 +17,7 @@ const OnassifyTechnicalChallengesCard = () => {
             key={challenge.title}
             className="flex items-start gap-2 mb-2 py-1 text-sm text-muted-foreground border-b border-border"
           >
-            <FiCheck className="mt-0.5 shrink-0 text-[#22C55E]" size={15} />
+            <FiCheck className="mt-0.5 shrink-0 text-primary" size={15} />
             {challenge.title}
           </li>
         ))}

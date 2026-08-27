@@ -8,10 +8,10 @@ export interface HelpOption {
 }
 
 export const helpOptions: HelpOption[] = [
-  { icon: FiLayers, label: 'Full-Stack Development', accentColor: '#3B82F6' },
-  { icon: FiMonitor, label: 'Frontend Development', accentColor: '#22D3EE' },
-  { icon: FiServer, label: 'Backend / API Development', accentColor: '#8B5CF6' },
-  { icon: FiUser, label: 'Freelance Project', accentColor: '#8B5CF6' },
-  { icon: FiBriefcase, label: 'Full-Time Opportunity', accentColor: '#22D3EE' },
-  { icon: FiMoreHorizontal, label: 'Something Else', accentColor: '#64748B' },
+  { icon: FiLayers, label: 'Full-Stack Development', accentColor: '#0F766E' },
+  { icon: FiMonitor, label: 'Frontend Development', accentColor: '#0D9488' },
+  { icon: FiServer, label: 'Backend / API Development', accentColor: '#52525B' },
+  { icon: FiUser, label: 'Freelance Project', accentColor: '#71717A' },
+  { icon: FiBriefcase, label: 'Full-Time Opportunity', accentColor: '#0D9488' },
+  { icon: FiMoreHorizontal, label: 'Something Else', accentColor: '#78716C' },
 ]

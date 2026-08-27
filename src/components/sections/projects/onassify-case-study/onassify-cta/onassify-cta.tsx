@@ -8,7 +8,7 @@ const OnassifyCta = () => {
   return (
     <div
       className="flex flex-col items-center gap-5 rounded-2xl border border-white/10 p-6 text-center sm:flex-row sm:justify-between sm:text-left"
-      style={{ background: 'linear-gradient(115deg, #0F766E 0%, #4338CA 55%, #6D28D9 100%)' }}
+      style={{ background: '#0F766E' }}
     >
       <div className="flex flex-col items-center gap-4 sm:flex-row">
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">

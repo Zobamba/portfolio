@@ -12,8 +12,8 @@ const seededRandom = (seed: number) => {
 
 const panelLineWidths = ['w-6', 'w-8', 'w-10', 'w-12', 'w-14']
 const panelGradients = [
-  ['rgba(59, 130, 246, 0.5)', 'rgba(99, 102, 241, 0.3)'],
-  ['rgba(99, 102, 241, 0.5)', 'rgba(139, 92, 246, 0.3)'],
+  ['hsl(var(--foreground) / 0.2)', 'hsl(var(--foreground) / 0.08)'],
+  ['hsl(var(--primary) / 0.45)', 'hsl(var(--primary) / 0.18)'],
 ]
 
 const panelLines = (seedBase: number, count: number) =>
@@ -38,12 +38,8 @@ const CodePanel = ({
   showCodeIcon?: boolean
 }) => (
   <div
-    className={`pointer-events-none absolute rounded-lg border bg-card-elevated/90 p-3 shadow-lg ${className}`}
-    style={{
-      transform: `rotate(${rotate}deg)`,
-      borderColor: 'rgba(99, 102, 241, 0.45)',
-      boxShadow: '0 0 22px 2px rgba(59, 130, 246, 0.28), inset 0 0 16px rgba(99, 102, 241, 0.06)',
-    }}
+    className={`pointer-events-none absolute rounded-lg border border-border bg-card-elevated/90 p-3 shadow-elevated ${className}`}
+    style={{ transform: `rotate(${rotate}deg)` }}
   >
     <div className="mb-2.5 flex items-center gap-1">
       <span className="h-1.5 w-1.5 rounded-full bg-destructive/70" />
@@ -58,7 +54,7 @@ const CodePanel = ({
 
     {showCodeIcon && (
       <span
-        className="absolute -bottom-4 -right-4 flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card-elevated text-primary shadow-lg"
+        className="absolute -bottom-4 -right-4 flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card-elevated text-primary shadow-card"
         style={{ transform: `rotate(${-rotate}deg)` }}
       >
         <FiCode size={20} />
@@ -69,7 +65,7 @@ const CodePanel = ({
 
 const JourneyLabel = ({ label, className }: { label: string; className: string }) => (
   <div
-    className={`pointer-events-none absolute rounded-md border border-border bg-card/90 px-[18px] py-1.5 text-xs font-medium text-foreground shadow-lg backdrop-blur-sm ${className}`}
+    className={`pointer-events-none absolute rounded-md border border-border bg-card/90 px-[18px] py-1.5 text-xs font-medium text-foreground shadow-card backdrop-blur-sm ${className}`}
   >
     {label}
   </div>
@@ -91,15 +87,15 @@ const MilestoneNode = ({
   breathing: boolean
 }) => (
   <>
-    <g opacity={0.55}>
+    <g opacity={0.4}>
       <circle
         cx={x}
         cy={y}
-        r={34}
+        r={26}
         fill={color}
-        opacity={breathing ? undefined : lit ? 0.32 : 0}
+        opacity={breathing ? undefined : lit ? 0.22 : 0}
         className={breathing ? 'animate-breathe' : undefined}
-        style={{ filter: 'blur(10px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
+        style={{ filter: 'blur(8px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
       />
     </g>
     <circle
@@ -111,14 +107,6 @@ const MilestoneNode = ({
       strokeWidth={0.9}
       opacity={lit ? 1 : 0}
       style={{ transition: `opacity ${FADE_MS}ms ease-out` }}
-    />
-    <circle
-      cx={x}
-      cy={y}
-      r={8}
-      fill={color}
-      opacity={lit ? 0.35 : 0}
-      style={{ filter: 'blur(3px)', transition: `opacity ${FADE_MS}ms ease-out` }}
     />
     <circle cx={x} cy={y} r={8} fill={color} opacity={lit ? 1 : 0} style={{ transition: `opacity ${FADE_MS}ms ease-out` }} />
   </>
@@ -153,15 +141,6 @@ const CareerJourneyGraphic = () => {
     <div ref={ref} className="relative mx-auto hidden aspect-[4/3] md:block md:w-[420px] xl:w-[480px]">
       <GlowDotGrid className="-inset-10" />
 
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 h-48 w-48 rounded-full blur-3xl"
-        style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%)' }}
-      />
-      <div
-        className="pointer-events-none absolute right-0 top-0 h-52 w-52 rounded-full blur-3xl"
-        style={{ background: 'radial-gradient(circle, rgba(99, 102, 241, 0.35), transparent 70%)' }}
-      />
-
       <CodePanel
         className="left-[-8%] top-[15%] h-[100px] w-[152px]"
         rotate={5}
@@ -173,9 +152,9 @@ const CareerJourneyGraphic = () => {
       <svg viewBox="0 0 400 300" className="absolute inset-0 h-full w-full" fill="none">
         <defs>
           <linearGradient id="careerPathGradient" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="65%" stopColor="#3B82F6" />
-            <stop offset="100%" stopColor="#6366F1" />
+            <stop offset="0%" stopColor="#0F766E" />
+            <stop offset="65%" stopColor="#0F766E" />
+            <stop offset="100%" stopColor="#0D9488" />
           </linearGradient>
         </defs>
         <path
@@ -184,9 +163,9 @@ const CareerJourneyGraphic = () => {
           strokeWidth={3.2}
           strokeLinecap="round"
           strokeLinejoin="round"
-          opacity={0.34}
+          opacity={0.22}
           style={{
-            filter: 'blur(4px)',
+            filter: 'blur(3px)',
             strokeDasharray: 700,
             strokeDashoffset: pathDrawn ? 0 : 700,
             transition: `stroke-dashoffset ${DRAW_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
@@ -205,19 +184,19 @@ const CareerJourneyGraphic = () => {
           }}
         />
 
-        <MilestoneNode x={130} y={255} color="#3B82F6" lit={stage >= 1} breathing={breathing} />
-        <MilestoneNode x={220} y={190} color="#4A7FF5" lit={stage >= 2} breathing={breathing} />
-        <MilestoneNode x={150} y={120} color="#5570F4" lit={stage >= 3} breathing={breathing} />
+        <MilestoneNode x={130} y={255} color="#0F766E" lit={stage >= 1} breathing={breathing} />
+        <MilestoneNode x={220} y={190} color="#115E59" lit={stage >= 2} breathing={breathing} />
+        <MilestoneNode x={150} y={120} color="#C2410C" lit={stage >= 3} breathing={breathing} />
 
-        <g opacity={0.55}>
+        <g opacity={0.4}>
           <circle
             cx={230}
             cy={50}
-            r={54}
-            fill="#6366F1"
-            opacity={breathing ? undefined : stage >= 4 ? 0.3 : 0}
+            r={44}
+            fill="#0D9488"
+            opacity={breathing ? undefined : stage >= 4 ? 0.22 : 0}
             className={breathing ? 'animate-breathe' : undefined}
-            style={{ filter: 'blur(14px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
+            style={{ filter: 'blur(10px)', transition: breathing ? undefined : `opacity ${FADE_MS}ms ease-out` }}
           />
         </g>
         <circle
@@ -244,15 +223,7 @@ const CareerJourneyGraphic = () => {
           cx={230}
           cy={50}
           r={9}
-          fill="#6366F1"
-          opacity={stage >= 4 ? 0.6 : 0}
-          style={{ filter: 'blur(3px)', transition: `opacity ${FADE_MS}ms ease-out` }}
-        />
-        <circle
-          cx={230}
-          cy={50}
-          r={9}
-          fill="#6366F1"
+          fill="#0D9488"
           opacity={stage >= 4 ? 1 : 0}
           style={{ transition: `opacity ${FADE_MS}ms ease-out` }}
         />
@@ -273,17 +244,11 @@ const CareerJourneyGraphic = () => {
         }}
       >
         <span className="relative flex items-center justify-center">
-          <span
-            className="absolute h-16 w-16 rounded-full"
-            style={{ background: 'radial-gradient(circle, rgba(99, 102, 241, 0.55), transparent 70%)', filter: 'blur(6px)' }}
-          />
           <FiMapPin
-            size={80}
+            size={72}
+            strokeWidth={0.8}
             className="relative"
-            style={{
-              stroke: 'url(#careerPathGradient)',
-              filter: 'drop-shadow(0 0 22px rgba(99, 102, 241, 0.75))',
-            }}
+            style={{ stroke: 'url(#careerPathGradient)' }}
           />
         </span>
       </div>

@@ -14,7 +14,7 @@ const SkillsHero = () => {
 
         <h1 className="mt-3 animate-reveal text-center text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-left sm:text-4xl">
           {skillsPage.headingLine1}{' '}
-          <span className="bg-name-gradient bg-clip-text text-transparent">
+          <span className="text-primary">
             {skillsPage.headingHighlight}
           </span>{' '}
           {skillsPage.headingLine2}

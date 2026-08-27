@@ -20,7 +20,7 @@ export const values: ValueItem[] = [
     icon: FiTrendingUp,
     title: 'Growth',
     description: "I'm always learning and improving to stay ahead and deliver better solutions.",
-    colorClass: 'text-[#22C55E]',
+    colorClass: 'text-subtle',
   },
   {
     icon: TbShieldCheck,
@@ -32,6 +32,6 @@ export const values: ValueItem[] = [
     icon: FiUsers,
     title: 'Collaboration',
     description: 'I love working with amazing people and turning ideas into great products together.',
-    colorClass: 'text-purple',
+    colorClass: 'text-secondary',
   },
 ]

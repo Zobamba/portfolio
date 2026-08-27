@@ -19,13 +19,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           />
         </div>
         {project.inProduction && (
-          <span className="inline-flex items-center gap-1 rounded-full bg-[#22C55E]/10 px-2 py-0.5 text-[10px] font-semibold text-[#22C55E]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
+          <span className="inline-flex items-center gap-1 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold text-primary">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             IN PRODUCTION
           </span>
         )}
         {project.engineeringBadge && (
-          <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] text-center font-semibold text-indigo-400">
+          <span className="inline-flex items-center rounded-full bg-amber-light px-2 py-0.5 text-[10px] text-center font-semibold text-secondary">
             {project.engineeringBadge}
           </span>
         )}
@@ -54,7 +54,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <>
               <a
                 href={project.caseStudyUrl}
-                className="inline-flex items-center gap-1.5 text-link hover:opacity-80"
+                className="inline-flex items-center gap-1.5 text-primary hover:opacity-80"
               >
                 {project.caseStudyLabel ?? 'View Case Study'}
                 <FiArrowRight size={14} />
@@ -87,7 +87,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-link hover:opacity-80"
+                  className="inline-flex items-center gap-1.5 text-primary hover:opacity-80"
                 >
                   Live Demo
                   <FiExternalLink size={14} />

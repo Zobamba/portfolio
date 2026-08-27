@@ -30,25 +30,15 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
           foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
-          to: 'hsl(var(--primary-to) / <alpha-value>)',
           hover: 'hsl(var(--primary-hover) / <alpha-value>)',
           active: 'hsl(var(--primary-active) / <alpha-value>)',
-        },
-        cta: {
-          to: 'hsl(var(--cta-to) / <alpha-value>)',
-          'to-hover': 'hsl(var(--cta-to-hover) / <alpha-value>)',
-          'to-active': 'hsl(var(--cta-to-active) / <alpha-value>)',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary) / <alpha-value>)',
           foreground: 'hsl(var(--secondary-foreground) / <alpha-value>)',
         },
-        link: 'hsl(var(--link) / <alpha-value>)',
-        purple: 'hsl(var(--purple) / <alpha-value>)',
         'accent-light': 'hsl(var(--accent-light) / <alpha-value>)',
-        soft: 'hsl(var(--soft) / <alpha-value>)',
-        ware: 'hsl(var(--ware) / <alpha-value>)',
-        'name-end': 'hsl(var(--name-end) / <alpha-value>)',
+        'amber-light': 'hsl(var(--amber-light) / <alpha-value>)',
         muted: {
           DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
           foreground: 'hsl(var(--muted-foreground) / <alpha-value>)',
@@ -124,16 +114,9 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      backgroundImage: {
-        'brand-gradient': 'linear-gradient(90deg, hsl(var(--primary-hover)) 0%, hsl(var(--primary-to)) 100%)',
-        'cta-gradient':
-          'linear-gradient(135deg, hsl(var(--primary-hover)) 0%, hsl(var(--cta-to-hover)) 100%)',
-        'cta-gradient-hover':
-          'linear-gradient(135deg, hsl(var(--primary-active)) 0%, hsl(var(--cta-to-active)) 100%)',
-        'stat-gradient': 'linear-gradient(90deg, hsl(var(--foreground)) 0%, hsl(var(--accent-light)) 100%)',
-        'name-gradient': 'linear-gradient(90deg, hsl(var(--primary-to)) 0%, hsl(var(--name-end)) 100%)',
-        'software-gradient': 'linear-gradient(90deg, hsl(var(--soft)) 0%, hsl(var(--ware)) 100%)',
-        'engineer-gradient': 'linear-gradient(90deg, hsl(var(--link)) 0%, hsl(var(--primary-to)) 100%)',
+      boxShadow: {
+        card: '0 4px 20px rgba(24, 24, 27, 0.06)',
+        elevated: '0 10px 30px rgba(24, 24, 27, 0.08)',
       },
     },
   },

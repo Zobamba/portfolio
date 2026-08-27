@@ -14,7 +14,7 @@ const OnassifyRoleCard = () => {
       <ul className="mt-3 flex flex-col gap-2">
         {myRole.items.map((item) => (
           <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-            <FiCheck className="mt-0.5 shrink-0 text-[#22C55E]" size={15} />
+            <FiCheck className="mt-0.5 shrink-0 text-primary" size={15} />
             {item}
           </li>
         ))}

@@ -45,7 +45,7 @@ const ProjectsExplorer = () => {
               className={cn(
                 'shrink-0 rounded border px-4 py-2 text-sm font-medium transition-all duration-200 sm:py-1',
                 category === filter.value
-                  ? 'border-transparent bg-cta-gradient text-primary-foreground hover:bg-cta-gradient-hover'
+                  ? 'border-transparent bg-primary text-primary-foreground hover:bg-primary-hover'
                   : 'border-border bg-card text-muted-foreground hover:text-foreground',
               )}
             >

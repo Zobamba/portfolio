@@ -12,7 +12,7 @@ const ProgressBar = ({ label, percentage }: ProgressBarProps) => {
       </div>
       <div className="h-[2px] w-full overflow-hidden bg-muted">
         <div
-          className="h-full bg-brand-gradient"
+          className="h-full bg-primary"
           style={{ width: `${percentage}%` }}
         />
       </div>

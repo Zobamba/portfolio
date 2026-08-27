@@ -46,17 +46,10 @@ const FloatingTechBadge = ({
       >
         <div
           className={cn(
-            'relative flex h-[70px] w-[84px] flex-col items-center justify-center gap-1.5 rounded-xl bg-card px-1.5 py-2 text-center',
-            color ? 'border' : 'border border-border shadow-lg',
+            'relative flex h-[70px] w-[84px] flex-col items-center justify-center gap-1.5 rounded-xl border bg-card px-1.5 py-2 text-center shadow-card',
+            !color && 'border-border',
           )}
-          style={
-            color
-              ? {
-                  borderColor: hexToRgba(color, 0.2),
-                  boxShadow: `0 4px 12px rgba(0, 0, 0, 0.25), 0 0 6px 0 ${hexToRgba(color, 0.2)}`,
-                }
-              : undefined
-          }
+          style={color ? { borderColor: hexToRgba(color, 0.25) } : undefined}
         >
           <span className={cn('absolute bg-border', connectorClasses[connectorSide])} />
           <span className="relative flex h-7 w-7 items-center justify-center">

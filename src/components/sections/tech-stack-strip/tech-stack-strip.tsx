@@ -13,7 +13,7 @@ const TechStackStrip = () => {
             <Reveal key={tech.name} delay={index * 60} distance={12}>
               <Badge variant="tech-pill" className="group items-center">
                 <tech.icon
-                  className={`${tech.colorClass} transition-all duration-200 group-hover:drop-shadow-[0_0_6px_currentColor]`}
+                  className={`${tech.colorClass} transition-opacity duration-200 group-hover:opacity-80`}
                   size={16}
                 />
                 {tech.name}

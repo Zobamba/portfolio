@@ -9,7 +9,7 @@ const ShowchatsHero = () => {
   return (
     <Container className="grid items-start gap-12 pb-16 pt-8 sm:pb-12 sm:pt-12 lg:grid-cols-2">
       <div>
-        <span className="inline-flex animate-reveal items-center rounded-full bg-indigo-500/10 px-2.5 py-1 text-xs font-semibold text-indigo-400">
+        <span className="inline-flex animate-reveal items-center rounded-full bg-amber-light px-2.5 py-1 text-xs font-semibold text-secondary">
           Backend Engineering
         </span>
 
@@ -36,7 +36,7 @@ const ShowchatsHero = () => {
           {hero.statusPills.map((status) => (
             <span
               key={status}
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#22C55E]/10 px-2.5 py-1 text-xs font-semibold text-[#22C55E]"
+              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-primary"
             >
               <FiCheckCircle size={12} />
               {status}

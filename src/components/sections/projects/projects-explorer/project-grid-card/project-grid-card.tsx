@@ -9,15 +9,15 @@ interface ProjectGridCardProps {
 }
 
 const categoryColorClass: Record<Project['category'], string> = {
-  'Web Application': 'text-link',
-  'Mobile Application': 'text-purple',
-  'APIs & Backend': 'text-[#22C55E]',
+  'Web Application': 'text-primary',
+  'Mobile Application': 'text-secondary',
+  'APIs & Backend': 'text-subtle',
   Other: 'text-muted-foreground',
 }
 
 const ProjectGridCard = ({ project }: ProjectGridCardProps) => {
   return (
-    <Card className="group flex h-full flex-col overflow-hidden rounded-lg p-4 transition-all duration-300 hover:-translate-y-[5px] hover:border-primary/50 hover:shadow-[0_0_24px_-6px_rgba(59,130,246,0.35)]">
+    <Card className="group flex h-full flex-col overflow-hidden rounded-lg p-4 transition-all duration-300 hover:-translate-y-[5px] hover:border-primary/50 hover:shadow-elevated">
       <div className="relative aspect-[3/1] w-full overflow-hidden rounded-md">
         <ProjectThumbnail
           variant={project.thumbnailVariant}
@@ -29,13 +29,13 @@ const ProjectGridCard = ({ project }: ProjectGridCardProps) => {
           {project.category}
         </span>
         {project.inProduction && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-[#22C55E]/15 px-2 py-1 text-[10px] font-semibold text-[#22C55E] backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#22C55E]" />
+          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-accent px-2 py-1 text-[10px] font-semibold text-primary backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             IN PRODUCTION
           </span>
         )}
         {project.engineeringBadge && (
-          <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-indigo-500/15 px-2 py-1 text-[10px] font-semibold text-indigo-400 backdrop-blur-sm">
+          <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-amber-light px-2 py-1 text-[10px] font-semibold text-secondary backdrop-blur-sm">
             {project.engineeringBadge}
           </span>
         )}
@@ -58,7 +58,7 @@ const ProjectGridCard = ({ project }: ProjectGridCardProps) => {
             <>
               <a
                 href={project.caseStudyUrl}
-                className="group/demo inline-flex items-center gap-1.5 text-link transition-colors duration-200 hover:opacity-80"
+                className="group/demo inline-flex items-center gap-1.5 text-primary transition-colors duration-200 hover:opacity-80"
               >
                 {project.caseStudyLabel ?? 'View Case Study'}
                 <FiArrowRight
@@ -106,7 +106,7 @@ const ProjectGridCard = ({ project }: ProjectGridCardProps) => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/demo inline-flex items-center gap-1.5 text-link transition-colors duration-200 hover:opacity-80"
+                  className="group/demo inline-flex items-center gap-1.5 text-primary transition-colors duration-200 hover:opacity-80"
                 >
                   Live Demo
                   <FiExternalLink

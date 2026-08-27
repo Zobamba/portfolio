@@ -8,7 +8,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        gradient: 'bg-cta-gradient text-primary-foreground hover:bg-cta-gradient-hover',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary-hover',
         outline: 'border border-outline-border bg-transparent text-foreground hover:bg-accent',
         ghost: 'bg-transparent text-foreground hover:bg-accent',
       },
@@ -18,7 +18,7 @@ export const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: 'gradient',
+      variant: 'primary',
       size: 'default',
     },
   },

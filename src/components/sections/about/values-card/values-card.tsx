@@ -6,12 +6,12 @@ import ValueItem from '@/src/components/sections/about/values-card/value-item/va
 
 const ValuesCard = () => {
   return (
-    <Card className="border-none bg-transparent p-5">
+    <Card className="border-none bg-transparent p-5 pr-0">
       <CardHeader
         icon={FiStar}
         title="What Drives Me"
         subtitle="The principles and values that guide my work."
-        iconColorClass="text-purple"
+        iconColorClass="text-secondary"
       />
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

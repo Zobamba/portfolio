@@ -25,7 +25,7 @@ const JourneyItem = ({ item, isLast }: JourneyItemProps) => {
         className="absolute left-0 top-1.5 h-2 w-2 rounded-full"
         style={{
           backgroundColor: item.accentColor,
-          boxShadow: `0 0 12px ${hexToRgba(item.accentColor, 0.6)}`,
+          boxShadow: `0 0 8px ${hexToRgba(item.accentColor, 0.4)}`,
         }}
       />
       {!isLast && <span className="absolute left-[4.5px] top-4 h-full w-px bg-muted" />}
@@ -34,7 +34,7 @@ const JourneyItem = ({ item, isLast }: JourneyItemProps) => {
         <div className="min-w-0 sm:flex-1">
           <p className="mt-0.5 text-sm font-semibold text-foreground">{item.role}</p>
           <p className="text-sm text-muted-foreground">
-            <span className="text-link">{item.credential}</span> • {item.meta}
+            <span className="text-primary">{item.credential}</span> • {item.meta}
           </p>
           <p className="text-xs font-medium text-subtle">{item.dateRange}</p>
           <p className="mt-1.5 text-sm text-muted-foreground">{item.bullet}</p>

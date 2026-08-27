@@ -20,7 +20,7 @@ const NavLinkItem = ({ link, onNavigate }: NavLinkItemProps) => {
       onClick={onNavigate}
       className={cn(
         'border-b-2 border-transparent pb-1 text-sm font-medium text-subtle transition-colors hover:text-foreground',
-        isActive && 'border-primary text-link',
+        isActive && 'border-primary text-primary',
       )}
     >
       {link.label}

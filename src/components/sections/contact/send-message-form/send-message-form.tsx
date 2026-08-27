@@ -17,7 +17,7 @@ const subjectOptions = [
 ]
 
 const fieldClass =
-  'w-full rounded-lg border border-border bg-background/60 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground transition-all duration-200 focus:border-primary focus:outline-none focus:shadow-[0_0_0_3px_rgba(59,130,246,0.10)]'
+  'w-full rounded-lg border border-border bg-background/60 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground transition-all duration-200 focus:border-primary focus:outline-none focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.12)]'
 
 const SendMessageForm = () => {
   const [name, setName] = useState('')

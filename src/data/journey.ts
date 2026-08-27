@@ -34,7 +34,7 @@ export const journey: JourneyItem[] = [
     credential: 'Xanotech Solutions',
     meta: 'Remote',
     bullet: 'Building secure and scalable banking systems for MFIs and Microfinance banks.',
-    accentColor: '#3B82F6',
+    accentColor: '#0F766E',
     tags: [
       { name: 'Node.js', icon: SiNodedotjs, colorClass: 'text-[#339933]' },
       { name: 'Express.js', icon: SiExpress, colorClass: 'text-foreground' },
@@ -49,7 +49,7 @@ export const journey: JourneyItem[] = [
     meta: 'Remote',
     bullet:
       'Developed and maintained web applications using MERN stack. Built features, improved performance and integrated third-party services.',
-    accentColor: '#8B5CF6',
+    accentColor: '#52525B',
     tags: [
       { name: 'React', icon: SiReact, colorClass: 'text-[#61DAFB]' },
       { name: 'Node.js', icon: SiNodedotjs, colorClass: 'text-[#339933]' },
@@ -63,7 +63,7 @@ export const journey: JourneyItem[] = [
     credential: 'B.Pharm.',
     meta: 'Licensed Pharmacist',
     bullet: 'Strong foundation in analytical thinking, attention to detail and problem solving.',
-    accentColor: '#64748B',
+    accentColor: '#C2410C',
     tags: [
       { name: 'Healthcare Background', icon: TbHeartbeat, colorClass: 'text-destructive', iconSize: 14 },
     ],

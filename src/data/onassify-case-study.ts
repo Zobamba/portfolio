@@ -132,10 +132,10 @@ export interface ProductScreenshot {
 }
 
 export const productScreenshots: ProductScreenshot[] = [
-  { label: 'Admin Dashboard', src: '/Dashboard.png', gradient: 'linear-gradient(135deg, #3B82F6 0%, #22D3EE 100%)' },
-  { label: 'Inventory Management', src: '/Inventory.png', gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%)' },
-  { label: 'POS Interface', src: '/POS.png', gradient: 'linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)' },
-  { label: 'Reports & Analytics', src: '/Reports.png', gradient: 'linear-gradient(135deg, #22C55E 0%, #22D3EE 100%)' },
+  { label: 'Admin Dashboard', src: '/Dashboard.png', gradient: 'linear-gradient(135deg, #0F766E 0%, #14B8A6 100%)' },
+  { label: 'Inventory Management', src: '/Inventory.png', gradient: 'linear-gradient(135deg, #52525B 0%, #71717A 100%)' },
+  { label: 'POS Interface', src: '/POS.png', gradient: 'linear-gradient(135deg, #C2410C 0%, #EA580C 100%)' },
+  { label: 'Reports & Analytics', src: '/Reports.png', gradient: 'linear-gradient(135deg, #0D9488 0%, #2DD4BF 100%)' },
 ]
 
 // Content shown inside the ProductShowcaseHero device mockup (dashboard + POS screens)

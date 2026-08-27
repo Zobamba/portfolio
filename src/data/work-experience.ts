@@ -30,7 +30,7 @@ export const workExperience: WorkExperienceItem[] = [
     technologies: ['Node.js', 'Express.js', 'TypeScript', 'PostgreSQL', 'REST APIs', 'Git'],
     logoText: 'X',
     logoSubtext: 'XANOTECH SOLUTIONS',
-    accentColor: '#3B82F6',
+    accentColor: '#0F766E',
   },
   {
     role: 'Full-Stack Developer',
@@ -48,7 +48,7 @@ export const workExperience: WorkExperienceItem[] = [
     technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux'],
     logoText: 'PS',
     logoSubtext: 'PRODUCT SQUARE',
-    accentColor: '#8B5CF6',
+    accentColor: '#52525B',
   },
   {
     role: 'Junior Developer',
@@ -60,6 +60,6 @@ export const workExperience: WorkExperienceItem[] = [
     contributions: [],
     technologies: ['HTML', 'CSS','JavaScript', 'PostgreSQL', 'Git', 'REST APIs'],
     logoText: '</>',
-    accentColor: '#64748B',
+    accentColor: '#C2410C',
   },
 ]

@@ -3,13 +3,12 @@ import { HiOutlineRocketLaunch } from 'react-icons/hi2'
 import { cta } from '@/src/data/showchats-case-study'
 
 // Same structural pattern as the Onassify case-study CTA (icon + title/description
-// + button on a gradient panel), so the two case studies close consistently — the
-// gradient itself uses this page's own sky-blue/violet identity, not Onassify's.
+// + button on a solid panel), so the two case studies close consistently.
 const ShowchatsCta = () => {
   return (
     <div
-      className="flex flex-col items-center gap-5 rounded-2xl border border-white/10 p-6 text-center sm:flex-row sm:justify-between sm:text-left border"
-      style={{ background: 'linear-gradient(115deg, #0369A1 0%, #4338CA 55%, #6D28D9 100%)' }}
+      className="flex flex-col items-center gap-5 rounded-2xl border border-white/10 p-6 text-center sm:flex-row sm:justify-between sm:text-left"
+      style={{ background: '#115E59' }}
     >
       <div className="flex flex-col items-center gap-4 sm:flex-row">
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">

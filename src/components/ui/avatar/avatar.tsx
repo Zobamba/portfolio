@@ -30,7 +30,7 @@ const Avatar = ({ src, alt, initials, size = 48, className }: AvatarProps) => {
       <div
         style={{ width: size, height: size }}
         className={cn(
-          'flex shrink-0 items-center justify-center rounded-full bg-brand-gradient text-sm font-semibold text-primary-foreground',
+          'flex shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground',
           className,
         )}
       >

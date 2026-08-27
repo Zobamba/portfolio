@@ -13,7 +13,7 @@ const AboutIntro = () => {
       <h1 className="mt-3 animate-reveal text-center text-4xl font-bold leading-tight text-foreground [animation-delay:100ms] sm:text-left sm:text-3xl">
         {aboutPage.headingLine1}
         <br />
-        <span className="bg-engineer-gradient bg-clip-text text-transparent">
+        <span className="text-primary">
           {aboutPage.headingLine2}
         </span>
       </h1>

@@ -1,5 +1,4 @@
 import type { StatItem as StatItemType } from '@/src/data/stats'
-import { cn } from '@/src/lib/utils'
 import CountUp from '@/src/components/ui/count-up/count-up'
 
 interface StatItemProps {
@@ -8,8 +7,6 @@ interface StatItemProps {
 
 const StatItem = ({ stat }: StatItemProps) => {
   const Icon = stat.icon
-  const indigo = stat.gradientIntensity !== undefined ? stat.gradientIntensity * 100 : undefined
-  const useNameGradient = indigo === 100
 
   return (
     <div className="flex items-center justify-center gap-3">
@@ -17,20 +14,7 @@ const StatItem = ({ stat }: StatItemProps) => {
         <Icon size={stat.iconSize ?? 20} />
       </span>
       <div>
-        <p
-          className={cn(
-            'bg-clip-text text-xl font-bold text-transparent',
-            useNameGradient && 'bg-name-gradient',
-            indigo === undefined && 'bg-stat-gradient',
-          )}
-          style={
-            useNameGradient || indigo === undefined
-              ? undefined
-              : {
-                  backgroundImage: `linear-gradient(90deg, color-mix(in srgb, white ${100 - indigo}%, hsl(var(--primary-to)) ${indigo}%) 0%, color-mix(in srgb, white ${100 - indigo}%, hsl(var(--name-end)) ${indigo}%) 100%)`,
-                }
-          }
-        >
+        <p className="text-xl font-bold text-foreground">
           <CountUp value={stat.number} />
         </p>
         <p className="text-xs text-muted-foreground">{stat.label}</p>

@@ -22,7 +22,7 @@ const AboutMeCard = () => {
         </div>
         <div className="flex items-center gap-2">
           <FiMail className="text-foreground" size={14} />
-          <a href={`mailto:${about.email}`} className="text-link hover:opacity-80">
+          <a href={`mailto:${about.email}`} className="text-primary hover:opacity-80">
             {about.email}
           </a>
         </div>
@@ -30,7 +30,7 @@ const AboutMeCard = () => {
 
       <Link
         href="/about"
-        className="mt-3 inline-flex w-fit items-center rounded border border-border bg-pill px-3 py-1.5 text-xs font-medium text-link hover:bg-pill-hover"
+        className="mt-3 inline-flex w-fit items-center rounded border border-border bg-pill px-3 py-1.5 text-xs font-medium text-primary hover:bg-pill-hover"
       >
         More About Me
       </Link>
