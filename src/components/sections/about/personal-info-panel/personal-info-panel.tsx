@@ -15,7 +15,7 @@ const personalInfo = [
 
 const PersonalInfoPanel = () => {
   return (
-    <Card className="min-w-0 py-5 border-none bg-inherit">
+    <Card className="min-w-0 p-5 border-none bg-inherit">
       <CardHeader icon={FiUser} title="Personal Info" />
       <div className="space-y-3">
         {personalInfo.map((item) => (

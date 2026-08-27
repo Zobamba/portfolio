@@ -8,7 +8,7 @@ const FeatureItem = ({ feature }: FeatureItemProps) => {
   const Icon = feature.icon
 
   return (
-    <div>
+    <div className="flex flex-col items-center sm:items-start">
       <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-primary">
         <Icon size={20} />
       </span>

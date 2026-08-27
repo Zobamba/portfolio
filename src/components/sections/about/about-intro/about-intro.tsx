@@ -22,7 +22,7 @@ const AboutIntro = () => {
         {aboutPage.paragraph}
       </p>
 
-      <div className="mt-8 grid animate-reveal grid-cols-2 gap-6 [animation-delay:300ms] xl:w-[650px] xl:grid-cols-4">
+      <div className="mt-8 grid animate-reveal grid-cols-2 justify-items-center gap-6 text-center [animation-delay:300ms] sm:justify-items-start sm:text-left xl:w-[650px] xl:grid-cols-4">
         {aboutFeatures.map((feature) => (
           <FeatureItem key={feature.title} feature={feature} />
         ))}
