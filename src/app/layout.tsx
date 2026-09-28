@@ -15,9 +15,9 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Onah Bernard Chizoba | Software Engineer',
+  title: 'Onah Bernard Chizoba | Software Engineer · Business systems & SaaS',
   description:
-    'Full-stack engineer in Lagos building banking systems, POS and inventory platforms, payroll and business workflows.',
+    'Software engineer in Lagos building production business systems and SaaS: point of sale and inventory, core banking, payroll and business workflows. Remote, EMEA and US Eastern hours.',
 }
 
 export default function RootLayout({

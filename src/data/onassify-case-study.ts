@@ -1,15 +1,15 @@
 import type { CaseStudyFact, DiagramLayer, RowItem } from '@/src/data/case-study-types'
 
 export const header = {
-  label: 'Full-stack · In production',
+  label: 'SaaS · In production',
   title: 'Onassify',
-  lead: 'A POS and inventory platform that businesses run their day on: sales at the counter, stock across locations, purchases, expenses, and the reports that tie them together.',
+  lead: 'A POS and inventory SaaS that businesses run their day on: sales at the counter, stock across locations, purchases, expenses, and the reports that tie them together.',
 }
 
 export const facts: CaseStudyFact[] = [
   { label: 'Role', value: 'Full-stack: architecture, APIs, frontend, deployment' },
   { label: 'Stack', value: 'React, TypeScript, Rails, MySQL, Tailwind' },
-  { label: 'Status', value: 'In production, used daily by businesses' },
+  { label: 'Status', value: 'In production, used daily by several businesses' },
   { label: 'Source', value: 'Private' },
 ]
 
@@ -20,7 +20,7 @@ export const demoVideo = {
 }
 
 export const overview =
-  'Onassify helps businesses manage sales, inventory, purchases, expenses and multiple locations from one place. It keeps stock accurate across branches and gives owners a live view of how the business is doing, instead of a spreadsheet at the end of the week.'
+  'Onassify helps businesses manage sales, inventory, purchases, expenses and multiple locations from one place. It keeps stock accurate across branches and gives owners a live view of how the business is doing, instead of a spreadsheet at the end of the week. Several businesses run on it, each with its own branches, stock and staff.'
 
 export const problem = {
   title: 'The problem',

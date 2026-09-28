@@ -34,13 +34,18 @@ const Intro = () => {
         {intro.lead}
       </h1>
 
-      <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">{intro.body}</p>
+      <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        {intro.body}
+      </p>
 
-      <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">{intro.background}</p>
+      <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        {intro.background}
+      </p>
 
       <p className="mt-6 text-base text-foreground sm:text-lg">
         Worked with: <span className="text-muted-foreground">{intro.workedWith.join(', ')}.</span>
       </p>
+      <p className="mt-3 text-sm text-muted-foreground">{about.hiring.summary.join(' · ')}</p>
 
       <div className="mt-10 flex flex-wrap items-center gap-6">
         <BookACallButton />

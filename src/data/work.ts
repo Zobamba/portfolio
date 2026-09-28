@@ -19,9 +19,9 @@ export interface WorkItem {
 export const work: WorkItem[] = [
   {
     title: 'Onassify',
-    label: 'Full-stack · In production',
+    label: 'SaaS · In production',
     summary:
-      'POS and inventory platform running real supermarkets: sales, stock, suppliers, debt and multi-location reporting.',
+      'POS and inventory SaaS used by several businesses: sales, stock, suppliers, debt and multi-location reporting.',
     image: {
       src: '/images/Dashboard.png',
       alt: 'Onassify dashboard showing daily sales, purchases, inventory health and recent activity',
