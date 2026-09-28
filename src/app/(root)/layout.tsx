@@ -5,7 +5,8 @@ export default function RootGroupLayout({ children }: { children: React.ReactNod
   return (
     <>
       <Navbar />
-      {children}
+      {/* Clears the fixed header */}
+      <div className="pt-20 sm:pt-24">{children}</div>
       <Footer />
     </>
   )
