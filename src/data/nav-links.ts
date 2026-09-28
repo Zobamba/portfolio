@@ -3,11 +3,9 @@ export interface NavLink {
   href: string
 }
 
+// Absolute hashes so the links also work from the case study pages.
 export const navLinks: NavLink[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Skills', href: '/skills' },
-  { label: 'Experience', href: '/experience' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Work', href: '/#work' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ]

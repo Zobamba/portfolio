@@ -66,6 +66,10 @@ const config: Config = {
         },
       },
       keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
         'caret-blink': {
           '0%,70%,100%': { opacity: '1' },
           '20%,50%': { opacity: '0' },
@@ -98,6 +102,7 @@ const config: Config = {
         },
       },
       animation: {
+        marquee: 'marquee var(--marquee-duration, 40s) linear infinite',
         'caret-blink': 'caret-blink 1.25s ease-out infinite',
         breathe: 'breathe 8s ease-in-out infinite',
         float: 'float 7s ease-in-out infinite',

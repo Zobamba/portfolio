@@ -1,122 +1,40 @@
-import {
-  FiDatabase,
-  FiZap,
-  FiMessageCircle,
-  FiShield,
-  FiTool,
-  FiUser,
-  FiBell,
-  FiCreditCard,
-  FiFilm,
-  FiClock,
-  FiGrid,
-} from 'react-icons/fi'
-import type { IconType } from 'react-icons'
+import type { CaseStudyFact, DiagramLayer, RowItem } from '@/src/data/case-study-types'
 
-export const hero = {
+export const header = {
+  label: 'Backend',
   title: 'ShowChats',
-  subtitle: 'Real-Time Backend Infrastructure',
-  description:
-    'Built the real-time backend powering live TV chat using TypeScript, Supabase, PostgreSQL, Realtime subscriptions, and Deno Edge Functions.',
-  statusPills: ['Backend Complete', 'Source Code Available'],
-  stack: ['TypeScript', 'Supabase', 'Deno Edge Functions', 'PostgreSQL'],
-  sourceUrl: 'https://github.com/Zobamba/showchats',
+  lead: 'The realtime backend behind live TV chat: rooms that open when a show airs, messages and reactions that land instantly, and the auth, billing and moderation around them.',
 }
 
-export const myContributionSection = {
-  icon: FiUser,
-  title: 'My Contribution',
-  description: 'What I personally built on ShowChats.',
-}
+export const sourceUrl = 'https://github.com/Zobamba/showchats'
 
-export interface ContributionItem {
-  icon: IconType
-  title: string
-  description: string
-}
-
-export const contributionItems: ContributionItem[] = [
-  {
-    icon: FiDatabase,
-    title: 'Supabase backend architecture',
-    description: 'Designed the backend foundation and data flow.',
-  },
-  {
-    icon: FiZap,
-    title: 'Deno Edge Functions',
-    description: 'Built serverless functions for backend logic.',
-  },
-  {
-    icon: FiMessageCircle,
-    title: 'Realtime messaging infrastructure',
-    description: 'Implemented live chat delivery and reactions.',
-  },
-  {
-    icon: FiShield,
-    title: 'Authentication & RLS',
-    description: 'Implemented secure access using Supabase Auth and Row Level Security.',
-  },
-  {
-    icon: FiBell,
-    title: 'Notifications',
-    description: 'Built the push notification system via Expo, plus scheduled email queue processing.',
-  },
-  {
-    icon: FiTool,
-    title: 'Production debugging',
-    description: 'Solved realtime deletion and JWT-related backend issues.',
-  },
+export const facts: CaseStudyFact[] = [
+  { label: 'Role', value: 'Backend engineer' },
+  { label: 'Stack', value: 'TypeScript, Supabase, PostgreSQL, Deno Edge Functions' },
+  { label: 'Status', value: 'Backend complete' },
+  { label: 'Source', value: 'GitHub', href: sourceUrl },
 ]
 
-export const cta = {
-  title: 'Backend, Built for Production',
-  description:
-    'Auth, billing, moderation, realtime messaging, and scheduled jobs — all designed, built, and shipped end to end. Open to backend and full-stack roles.',
-  buttonLabel: 'Get in Touch',
-  buttonHref: '/contact',
-}
+export const architecture: DiagramLayer[] = [
+  { name: 'Clients', items: ['Expo mobile app', 'Web'] },
+  { name: 'Edge Functions', items: ['Auth + invites', 'Rooms & moderation', 'Push + email queue'] },
+  { name: 'Supabase', items: ['Postgres + RLS', 'Realtime channels'] },
+]
 
-export const servicesSection = {
-  icon: FiGrid,
-  title: 'Backend Services',
-  description: 'What the Edge Functions layer actually covers.',
-}
+export const contributions: RowItem[] = [
+  { title: 'Backend architecture', description: 'Designed the Supabase foundation and how data flows through it.' },
+  { title: 'Deno Edge Functions', description: 'Serverless functions for the backend logic.' },
+  { title: 'Realtime messaging', description: 'Live chat delivery and reactions.' },
+  { title: 'Authentication & RLS', description: 'Secure access with Supabase Auth and Row Level Security.' },
+  { title: 'Notifications', description: 'Push notifications via Expo, plus a scheduled email queue.' },
+  { title: 'Production debugging', description: 'Tracked down realtime deletion and JWT issues.' },
+]
 
-export interface ServiceGroup {
-  icon: IconType
-  title: string
-  description: string
-}
-
-export const serviceGroups: ServiceGroup[] = [
-  {
-    icon: FiShield,
-    title: 'Authentication',
-    description: 'Email/password + OAuth (Google, Apple), invite validation, rate limiting.',
-  },
-  {
-    icon: FiMessageCircle,
-    title: 'Realtime Rooms & Messaging',
-    description: 'Room join/leave, live messages, reactions, pinning and moderation.',
-  },
-  {
-    icon: FiCreditCard,
-    title: 'Subscriptions & Billing',
-    description: 'Apple IAP & Google Play Billing with webhook-based receipt verification.',
-  },
-  {
-    icon: FiBell,
-    title: 'Notifications',
-    description: 'Push notifications via Expo and scheduled email queue processing.',
-  },
-  {
-    icon: FiFilm,
-    title: 'Content & Moderation',
-    description: 'TMDB & TVMedia integrations plus OpenAI content moderation.',
-  },
-  {
-    icon: FiClock,
-    title: 'Scheduled Jobs',
-    description: 'pg_cron tasks for room status, email queue and trending syncs.',
-  },
+export const services: RowItem[] = [
+  { title: 'Authentication', description: 'Email/password and OAuth (Google, Apple), invite validation, rate limiting.' },
+  { title: 'Rooms & messaging', description: 'Join and leave, live messages, reactions, pinning and moderation.' },
+  { title: 'Subscriptions & billing', description: 'Apple IAP and Google Play Billing with webhook receipt verification.' },
+  { title: 'Notifications', description: 'Expo push notifications and scheduled email queue processing.' },
+  { title: 'Content & moderation', description: 'TMDB and TVMedia integrations, plus OpenAI content moderation.' },
+  { title: 'Scheduled jobs', description: 'pg_cron tasks for room status, the email queue and trending syncs.' },
 ]

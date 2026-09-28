@@ -11,6 +11,7 @@ export const buttonVariants = cva(
         primary: 'bg-primary text-primary-foreground hover:bg-primary-hover',
         outline: 'border border-outline-border bg-transparent text-foreground hover:bg-accent',
         ghost: 'bg-transparent text-foreground hover:bg-accent',
+        ink: 'rounded-full bg-foreground text-background hover:bg-foreground/85',
       },
       size: {
         default: 'px-5 py-2.5 text-sm',

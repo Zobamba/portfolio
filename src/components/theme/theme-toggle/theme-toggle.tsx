@@ -1,28 +1,23 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import { useTheme } from 'next-themes'
-import { FiSun, FiMoon } from 'react-icons/fi'
 
+const subscribe = () => () => {}
+
+// A quiet text control for the footer; the theme follows the system until someone picks.
 const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- hydration-safe mount flag, no external-system alternative
-    setMounted(true)
-  }, [])
-
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false)
   const isDark = mounted && resolvedTheme === 'dark'
 
   return (
     <button
       type="button"
-      aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-primary hover:text-primary"
+      className="text-muted-foreground transition-colors hover:text-foreground"
     >
-      {mounted && (isDark ? <FiSun size={16} /> : <FiMoon size={16} />)}
+      {mounted ? (isDark ? 'Light mode' : 'Dark mode') : 'Theme'}
     </button>
   )
 }

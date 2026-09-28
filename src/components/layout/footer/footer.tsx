@@ -1,23 +1,15 @@
-import Link from 'next/link'
-import { HiOutlineCodeBracket } from 'react-icons/hi2'
+import ThemeToggle from '@/src/components/theme/theme-toggle/theme-toggle'
 import Container from '@/src/components/ui/container/container'
-import SocialLinks from '@/src/components/ui/social-links/social-links'
+import LagosClock from '@/src/components/ui/lagos-clock/lagos-clock'
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border">
-      <Container className="flex flex-col items-center gap-4 py-4 sm:flex-row sm:justify-between">
-        <div className="flex flex-col items-center gap-1 sm:items-start">
-          <Link href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <HiOutlineCodeBracket className="text-primary" size={22} />
-            OBC
-          </Link>
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Onah Bernard Chizoba. All rights reserved.
-          </p>
-        </div>
-
-        <SocialLinks />
+    <footer>
+      <Container className="flex max-w-[1040px] flex-col gap-4 border-t border-border py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-muted-foreground">
+          © {new Date().getFullYear()} Onah Bernard Chizoba · <LagosClock />
+        </p>
+        <ThemeToggle />
       </Container>
     </footer>
   )
