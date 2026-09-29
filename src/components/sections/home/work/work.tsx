@@ -5,6 +5,7 @@ import Container from '@/src/components/ui/container/container'
 import Reveal from '@/src/components/ui/reveal/reveal'
 import SectionLabel from '@/src/components/ui/section-label/section-label'
 import SystemDiagram from '@/src/components/ui/system-diagram/system-diagram'
+import VideoGuide from '@/src/components/ui/video-guide/video-guide'
 
 const linkClass =
   'text-sm text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground'
@@ -22,7 +23,7 @@ const Work = () => {
         {work.map((item, index) => (
           <Reveal key={item.title}>
             <article>
-              <div className="overflow-hidden rounded-2xl border border-border bg-card p-2 sm:p-3">
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-2 sm:p-3">
                 {item.image ? (
                   <Image
                     src={item.image.src}
@@ -35,6 +36,14 @@ const Work = () => {
                   />
                 ) : (
                   item.diagram && <SystemDiagram {...item.diagram} />
+                )}
+                {item.demo && item.image && (
+                  <VideoGuide
+                    {...item.demo}
+                    poster={item.image.src}
+                    link={item.links[0]}
+                    className="absolute bottom-3.5 left-3.5 sm:bottom-7 sm:left-7"
+                  />
                 )}
               </div>
 

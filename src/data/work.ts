@@ -1,4 +1,5 @@
 import type { DiagramLayer } from '@/src/data/case-study-types'
+import { demoVideo as onassifyDemo } from '@/src/data/onassify-case-study'
 import { architecture as showchatsArchitecture } from '@/src/data/showchats-case-study'
 
 export interface WorkLink {
@@ -13,6 +14,8 @@ export interface WorkItem {
   /** Screenshot under /public. Backend work has no screens, so it shows `diagram` instead. */
   image?: { src: string; alt: string; width: number; height: number }
   diagram?: { layers: DiagramLayer[]; label: string }
+  /** A demo that opens over the page from a small card on the screenshot. */
+  demo?: { title: string; videoUrl: string; duration: string }
   links: WorkLink[]
 }
 
@@ -28,6 +31,7 @@ export const work: WorkItem[] = [
       width: 3024,
       height: 1964,
     },
+    demo: { ...onassifyDemo, duration: '60 seconds' },
     links: [{ label: 'Case study', href: '/projects/onassify' }],
   },
   {
