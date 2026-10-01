@@ -4,5 +4,5 @@ export const intro = {
   background:
     'That habit comes from my first career. Before software, I was a licensed pharmacist, where a small mistake lands on a real person.',
   workedWith: ['Xanotech Solutions', 'Product Square Technologies', 'independent clients'],
-  resumeUrl: 'https://drive.google.com/file/d/1JTIRmWQ3Q8OjY1rPzmiwJJjTEMSeqkTP/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1d9E4licUIo4-5JSEs6X5srsIK4hBz10m/view?usp=sharing',
 }
